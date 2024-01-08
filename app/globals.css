@@ -17,20 +17,88 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
     width: 100%;
     height: 100vh;
+}
+input{
+  border-radius: 4px;
 }
 .navigation{
   width: 94%;
   height: auto;
   margin: 0 auto;
-  background-color: azure;
+  background-color: #fff;
   border-radius: 10px;
 }
+.profile-container{
+  position: relative;
+}
+.Like-container, .Comment-Container, .Event-Conatiner, .AddPost-Container, .profileImage{
+  line-height: 20px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+.icon-container .icon{
+  font-size: 18px;
+}
+.totalCount{
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.titlenameName{
+  font-size: .9rem;
+  color:darkgrey
+}
+.imagecontainer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profileImage .image{
+  position: absolute;
+  bottom: 10px;
+
+  background-color: aliceblue;
+}
+.namedetails{
+  margin-bottom: -25px;
+}
+
+.MenuMainContainer{
+  width: 100%;
+}
+
+.SearchContainer{
+  width: 100%;
+}
+.SearchContainer #Inputsearch{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid lightgrey;
+  background-color: #fff !important;
+  
+}
+.menuContainer{
+  width: 100%;
+  text-align: end;
+}
+
+
+/* pages */
+.PageContainer{
+  width: 94%;
+  margin: 14px auto;
+}
+
+
+
+
