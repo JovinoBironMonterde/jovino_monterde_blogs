@@ -1,11 +1,17 @@
+"use client"
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import CommentIcon from '@mui/icons-material/Comment';
+import { useRouter } from 'next/navigation';
 
 
 const Navbar = () => {
+  const router = useRouter();
+
+  const isProfileActive = router.pathname === '/page/profile';
+
   return (
     <div className='rounded overflow-hidden'>
       <div className="cover-photo h-60 bg-slate-200">
@@ -42,7 +48,7 @@ const Navbar = () => {
             <input type="text" className=''  name="" id="Inputsearch" />
           </div>
           <div className="menuContainer">
-            <Link className='mx-3' href="/page/profile">Profile</Link>
+            <Link className={`mx-3 ${isProfileActive ? 'active-link' : ''}`} href="/page/profile">Profile</Link>
             <Link className='mx-3' href="/page/post">Post</Link>
             <Link className='mx-3' href="/page/gallery">Gallery</Link>
             <Link className='mx-3' href="/page/follower">Followers</Link>
