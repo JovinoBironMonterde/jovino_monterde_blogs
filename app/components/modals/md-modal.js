@@ -19,6 +19,7 @@ const DynamicModal = ({ open, onClose, title, description, children }) => {
         variant="outlined"
         sx={{
           maxWidth: 800,
+          height: 900,
           borderRadius: 'md',
           p: 3,
           boxShadow: 'lg',

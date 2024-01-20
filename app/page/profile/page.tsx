@@ -6,9 +6,11 @@ import profileuser from '../../../public/assets/img/sample2.webp'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import CommentIcon from '@mui/icons-material/Comment';
+import SendIcon from '@mui/icons-material/Send';
 
 import Smallmodal from '../../components/modals/sm-modal'
 import Medmodal from '../../components/modals/md-modal'
+import Comments from '../../components/comments'
 
 const Profile = () => {
   const [open, setOpen] = useState(false);
@@ -28,14 +30,14 @@ const Profile = () => {
     sd
       </div>
       <div className="Content2 card lg:w-[60%] md:w=[100%] rounded lg:ml-4">
-        <div className="AddPost mb-3">
+        {/* <div className="AddPost mb-3">
           <div className="input-container">
             <textarea name="newpost" placeholder='Create new post' className='p-3' id=""></textarea>
           </div>
           <div className="PostContainer">
             <div className="w-[100] h-[40%] bg-slate-400">sds</div>
           </div>
-        </div>
+        </div> */}
         <div className="Post-content mb-3">
             <div className="card-body">
               <div className="postheader">
@@ -71,7 +73,10 @@ const Profile = () => {
               <div className="Postcontent">
                 <p className='content'> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quasi! Veniam tempora maxime aut labore quaerat eum expedita voluptate doloribus ab architecto corrupti harum illo quae quis, hic, dolores excepturi!</p>
                 <div className="postimage-content">
-                  <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" />
+                  <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
+                  <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
+                  <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
+                  <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
                 </div>
               </div>
               <div className='likecomment-container'>
@@ -81,23 +86,36 @@ const Profile = () => {
             </div>
             <div>
 
-
-  
             <Medmodal
-            
               open={open}
               onClose={mdhandleClose}
               title="This is the modal title"
               description=""
             >
-              <div className='fsdfdfd'>
+              <div className=''>
                 {/* Your dynamic content goes here */}
                 <p>This is the dynamic content of the modal.</p>
                 <div className="Modal-content">
-                  <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" />
-                </div>
-                <div>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, eligendi expedita. Aut, repellat nostrum! Rerum delectus sint praesentium velit maxime facere ut repudiandae doloremque quam, quos odit vitae enim vel corrupti adipisci nostrum nam error consequatur dignissimos officiis! Unde consectetur voluptas laborum adipisci, blanditiis odit cupiditate suscipit reiciendis culpa omnis!
+                  <div className="postimage-content-Modal">
+                    <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
+                    <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
+                    <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
+                    <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
+                  </div>
+                  <div className="p-4">
+                    <div className="AddCommentConatiner">
+                      <Comments />
+                    </div>
+                    <div className="inputComment">
+                      <div className="flex items-center ">
+                        <div className="inputCommentProfile">
+                            <img src="https://images.pexels.com/photos/5391172/pexels-photo-5391172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt='User image' width={100} />
+                        </div>
+                        <textarea name="" id="" className='mx-3' cols={70}></textarea>
+                        <div className="sendIcon"><SendIcon /></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Medmodal>
