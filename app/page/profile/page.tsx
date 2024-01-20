@@ -10,7 +10,7 @@ import CommentIcon from '@mui/icons-material/Comment';
 import Smallmodal from '../../components/modals/sm-modal'
 import Medmodal from '../../components/modals/md-modal'
 
-const Page = () => {
+const Profile = () => {
   const [open, setOpen] = useState(false);
 
 
@@ -109,4 +109,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default Profile
