@@ -13,13 +13,14 @@ import Medmodal from '../../components/modals/md-modal'
 const Page = () => {
   const [open, setOpen] = useState(false);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+
   const mdhandleOpen = () => {
     setOpen(true);
   };
 
+  const mdhandleClose = () => {
+    setOpen(false);
+  };
   return (
     <div className='PageContainer'>
      <div className="lg:flex md:block">
@@ -83,8 +84,9 @@ const Page = () => {
 
   
             <Medmodal
+            
               open={open}
-              onClose={handleClose}
+              onClose={mdhandleClose}
               title="This is the modal title"
               description=""
             >
