@@ -1,4 +1,4 @@
-"Use client"
+"use client"
 import React, { useState } from 'react';
 import Image from 'next/image'
 import profileuser from '../../../public/assets/img/sample2.webp'
