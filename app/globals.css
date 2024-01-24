@@ -62,10 +62,10 @@ input:active, input:focus, textarea:active, textarea:focus{
   border: 1px solid #e6e6e6;
   border-radius: 6px;
   padding: 16px;
+  padding-bottom: 8px !important;
 }
 .postheader{
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
 }
@@ -133,6 +133,30 @@ input:active, input:focus, textarea:active, textarea:focus{
   align-items: center;
   justify-content: space-between;
   padding: 5px 20px;
+}
+.likecomment-container .like, .likecomment-container .comment,
+ .Modal-likecomment-container .like, .Modal-likecomment-container .comment{
+  display: flex;
+  align-items: center;
+}
+.Modal-likecomment-container{
+  display: flex;
+  align-items: center;
+}
+.Modal-likecomment-container .mx-4{
+  display: flex;
+  align-items: center;
+}
+.linkButton{
+  font-size: 12px !important;
+  margin-left: 10px;
+  border-bottom: 1px solid transparent;
+  line-height: 12px;
+}
+.linkButton:hover{
+  cursor: pointer;
+  border-bottom: 1px solid #321eee;
+  color: #321eee;
 }
 .MoreVert{
   font-size: 16px;
@@ -230,10 +254,10 @@ input:active, input:focus, textarea:active, textarea:focus{
 .fsdfdfd{
   width: 100%;
 }
-.Modal-content{
+/* .Modal-content{
     width: 100%;
    height: auto;
-}
+} */
 
 
 /* pages */
@@ -267,17 +291,74 @@ input:active, input:focus, textarea:active, textarea:focus{
  
 
 }
+
 .inputCommentProfile{
   width: 40px;
   height: 35px;
   overflow: hidden;
   border-radius: 25px;
 }
+.inputComment{
+  position: absolute;
+  padding: 20px 10px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
 
 .sendIcon{
   border-radius: 50%;
   padding: 10px;
-  background-color: bisque;
 }
+/* .AddCommentConatiner{
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+} */
+.MuiSheet-root{
+  padding: 0 !important;
+}
+.MuiSheet-root:focus{
+  height: 900px !important;
+  outline: none !important;
+  position: relative;
+  
+}
+
+ .ReplyComment{
+  padding-left: 75px;
+ }
+
+ .Comments-Container{
+  width: 100%;
+  height: 740px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-y: scroll;
+ }
+.CommentContainer .bg-slate-100{
+  border-radius: 20px !important; 
+}
+
+.commentcontent{
+  padding: 16px 0px;
+}
+.iconbutton{
+  padding: 10px;
+  font-size: 38px !important;
+  border-radius: 20px;
+  color: rgb(95, 95, 95);
+}
+.iconbutton:hover{
+  cursor: pointer;
+  background-color: rgb(3, 3, 3);
+  color: #fff;
+  transition: all .3s ease-in-out;
+}
+
+
+
+
 
 

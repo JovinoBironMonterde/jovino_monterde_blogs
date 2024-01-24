@@ -1,20 +1,20 @@
+// page/profile/page.tsx
 "use client"
-import React, { useState } from 'react';
-import Image from 'next/image'
-import profileuser from '../../../public/assets/img/sample2.webp'
+import React, { useEffect, useState } from 'react';
+import db from '../../database/connect_db';
+import Image from 'next/image';
+import profileuser from '../../../public/assets/img/sample2.webp';
 
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import CommentIcon from '@mui/icons-material/Comment';
-import SendIcon from '@mui/icons-material/Send';
 
-import Smallmodal from '../../components/modals/sm-modal'
-import Medmodal from '../../components/modals/md-modal'
-import Comments from '../../components/comments'
+import Medmodal from '../../components/modals/md-modal';
+import Comments from '../../components/comments';
 
 const Profile = () => {
   const [open, setOpen] = useState(false);
-
+  const [likesCount, setLikesCount] = useState(0);
 
   const mdhandleOpen = () => {
     setOpen(true);
@@ -23,6 +23,45 @@ const Profile = () => {
   const mdhandleClose = () => {
     setOpen(false);
   };
+
+  const handleLike = async () => {
+    try {
+      const response = await fetch('page/api/like', {
+        method: 'POST',
+      });
+
+      if (response.ok) {
+        // Assuming the response contains the updated likes count
+        const result = await response.json();
+        setLikesCount(result.likesCount);
+      } else {
+        console.error('Failed to like the post');
+      }
+    } catch (error) {
+      console.error('Error while liking the post:', error);
+    }
+  };
+
+  useEffect(() => {
+    // Fetch likes count from the database on component mount
+    const fetchLikesCount = async () => {
+      try {
+        const response = await fetch('page/api/like');
+
+        if (response.ok) {
+          const result = await response.json();
+          setLikesCount(result.likesCount);
+        } else {
+          console.error('Failed to fetch likes count');
+        }
+      } catch (error) {
+        console.error('Error while fetching likes count:', error);
+      }
+    };
+
+    fetchLikesCount();
+  }, []);
+
   return (
     <div className='PageContainer'>
      <div className="lg:flex md:block">
@@ -30,15 +69,8 @@ const Profile = () => {
     sd
       </div>
       <div className="Content2 card lg:w-[60%] md:w=[100%] rounded lg:ml-4">
-        {/* <div className="AddPost mb-3">
-          <div className="input-container">
-            <textarea name="newpost" placeholder='Create new post' className='p-3' id=""></textarea>
-          </div>
-          <div className="PostContainer">
-            <div className="w-[100] h-[40%] bg-slate-400">sds</div>
-          </div>
-        </div> */}
         <div className="Post-content mb-3">
+
             <div className="card-body">
               <div className="postheader">
                 <div className='postheadername'>
@@ -48,14 +80,24 @@ const Profile = () => {
                     <div className="post-date">June- 06, 1993</div>
                   </div>
                 </div>
-                <div><MoreVertIcon className='MoreVert'/></div>
+                <div className=''><MoreVertIcon className='iconbutton'/></div>
               </div>
               <div className="Postcontent">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quasi! Veniam tempora maxime aut labore quaerat eum expedita voluptate doloribus ab architecto corrupti harum illo quae quis, hic, dolores excepturi!
               </div>
               <div className='likecomment-container'>
-                <div className="like"><ThumbUpOffAltIcon className='like-icon' /></div>
-                <div className="comment"   onClick={mdhandleOpen}><CommentIcon className='comment-icon'/></div>
+
+                <div className='like'>
+                  <ThumbUpOffAltIcon className='iconbutton' onClick={handleLike} />
+                  <div className='linkButton'>
+                    <span id='visitorLike'>{likesCount}</span> <span>Others</span>
+                  </div>
+                </div>
+
+                <div className="comment"   onClick={mdhandleOpen}>
+                  <div className='linkButton mx-4'><span>10</span>&nbsp;Comments</div>
+                  <CommentIcon className='iconbutton'/>
+                </div>
               </div>
             </div>
 
@@ -68,7 +110,7 @@ const Profile = () => {
                     <div className="post-date">June- 06, 1993</div>
                   </div>
                 </div>
-                <div><MoreVertIcon className='MoreVert'/></div>
+                <div><MoreVertIcon className='iconbutton'/></div>
               </div>
               <div className="Postcontent">
                 <p className='content'> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quasi! Veniam tempora maxime aut labore quaerat eum expedita voluptate doloribus ab architecto corrupti harum illo quae quis, hic, dolores excepturi!</p>
@@ -80,46 +122,34 @@ const Profile = () => {
                 </div>
               </div>
               <div className='likecomment-container'>
-                <div className="like"><ThumbUpOffAltIcon className='like-icon' /></div>
-                <div className="comment"  onClick={mdhandleOpen}><CommentIcon className='comment-icon'/></div>
+                <div className="like">
+                  <ThumbUpOffAltIcon className='iconbutton' />
+                  <div className='linkButton'>You and <span>10</span>&nbsp;Others</div>
+                </div>
+                <div className="comment"   onClick={mdhandleOpen}>
+                  <div className='linkButton mx-4'><span>10</span>&nbsp;Comments</div>
+                  <CommentIcon className='iconbutton'/>
+                </div>
               </div>
             </div>
             <div>
-
-            <Medmodal
-              open={open}
-              onClose={mdhandleClose}
-              title="This is the modal title"
-              description=""
-            >
-              <div className=''>
-                {/* Your dynamic content goes here */}
-                <p>This is the dynamic content of the modal.</p>
-                <div className="Modal-content">
-                  <div className="postimage-content-Modal">
-                    <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
-                    <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
-                    <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
-                    <div className="imageCon"> <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="100%" /></div>
-                  </div>
-                  <div className="p-4">
+              <Medmodal
+                open={open}
+                onClose={mdhandleClose}
+                title=""
+                description=""
+              >
+                <div className="py-3 px-4 fs-20"><h2>All Comments</h2></div>
+                
+                <div className='ModalCommentContainer pt-4'>
+                  <div className="Modal-content">
                     <div className="AddCommentConatiner">
                       <Comments />
                     </div>
-                    <div className="inputComment">
-                      <div className="flex items-center ">
-                        <div className="inputCommentProfile">
-                            <img src="https://images.pexels.com/photos/5391172/pexels-photo-5391172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt='User image' width={100} />
-                        </div>
-                        <textarea name="" id="" className='mx-3' cols={70}></textarea>
-                        <div className="sendIcon"><SendIcon /></div>
-                      </div>
-                    </div>
                   </div>
                 </div>
-              </div>
-            </Medmodal>
-          </div>
+              </Medmodal>
+            </div>
         </div>
       </div>
      </div>
