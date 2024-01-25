@@ -2,6 +2,7 @@
 import connectDb from '../../database/connect_db';
 
 export default async function handler(req, res) {
+  console.log('Received request to /api/like');
   if (req.method === 'GET') {
     // Fetch likes count
     const connection = await connectDb();

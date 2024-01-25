@@ -26,7 +26,7 @@ const Profile = () => {
 
   const handleLike = async () => {
     try {
-      const response = await fetch('page/api/like', {
+      const response = await fetch('.././api/like', {
         method: 'POST',
       });
 
@@ -46,7 +46,7 @@ const Profile = () => {
     // Fetch likes count from the database on component mount
     const fetchLikesCount = async () => {
       try {
-        const response = await fetch('page/api/like');
+        const response = await fetch('.././api/like');
 
         if (response.ok) {
           const result = await response.json();
@@ -65,10 +65,10 @@ const Profile = () => {
   return (
     <div className='PageContainer'>
      <div className="lg:flex md:block">
-      <div className="content1 card lg:w-[40%] h-[50px] md:w=[100%] rounded">
+      <div className="content1  lg:w-[40%] h-[50px] md:w=[100%] rounded">
     sd
       </div>
-      <div className="Content2 card lg:w-[60%] md:w=[100%] rounded lg:ml-4">
+      <div className="Content2  lg:w-[60%] md:w=[100%] rounded lg:ml-4">
         <div className="Post-content mb-3">
 
             <div className="card-body">
