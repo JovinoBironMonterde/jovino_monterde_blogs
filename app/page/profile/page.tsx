@@ -4,13 +4,19 @@ import React, { useEffect, useState } from 'react';
 import db from '../../database/connect_db';
 import Image from 'next/image';
 import profileuser from '../../../public/assets/img/sample2.webp';
+import Link from 'next/link';
 
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import CommentIcon from '@mui/icons-material/Comment';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import MonitorIcon from '@mui/icons-material/Monitor';
+import HomeIcon from '@mui/icons-material/Home';
 
 import Medmodal from '../../components/modals/md-modal';
 import Comments from '../../components/comments';
+
 
 const Profile = () => {
   const [open, setOpen] = useState(false);
@@ -66,7 +72,85 @@ const Profile = () => {
     <div className='PageContainer'>
      <div className="lg:flex md:block">
       <div className="content1  lg:w-[40%] h-[50px] md:w=[100%] rounded">
-    sd
+        <div className="card">
+          <h4>About</h4>
+          <p>Hello! I'm <span>Jovi Monterde,</span> a passionate frontend developer with a love for creating beautiful and user-friendly web experiences. With 11 months of experience in the field, I've had the privilege of working on a wide range of projects, from single-page applications to complex e-commerce platforms.</p>
+          <hr className='my-4' />
+          <div>
+            <div className="flex items-center mb-3">
+              <div className='mr-3'><BusinessCenterIcon /></div>
+              <div>
+                <p>Junior Frontend Developer</p>
+              </div>
+            </div>
+            <div className="flex items-center mb-3">
+              <div className='mr-3'><AlternateEmailIcon /></div>
+              <div>
+                <p>jovinobironmonterde@gmail.com</p>
+              </div>
+            </div>
+            <div className="flex items-center mb-3">
+              <div className='mr-3'><MonitorIcon /></div>
+              <div>
+                <p><Link href="https://portfolio-jovinomonterde.vercel.app/">https://portfolio-jovinomonterde.vercel.app/</Link></p>
+              </div>
+            </div>
+            <div className="flex items-center mb-3">
+              <div className='mr-3'><HomeIcon /></div>
+              <div>
+                <p>Blk 66 Lot 25, Channel Ridge View
+                  Dist 1 Babatngon Leyte
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <h4>Photos</h4>
+          <div className="PhotosContainer">
+            <div className="photoimage">
+              <Image src={profileuser} className='img' alt="Profile User"/>
+            </div>
+            <div className="photoimage">
+              <Image src={profileuser} className='img' alt="Profile User"/>
+            </div>
+            <div className="photoimage">
+              <Image src={profileuser} className='img' alt="Profile User"/>
+            </div>
+            <div className="photoimage">
+              <Image src={profileuser} className='img' alt="Profile User"/>
+            </div>
+            <div className="photoimage">
+              <Image src={profileuser} className='img' alt="Profile User"/>
+            </div>
+            <div className="photoimage">
+              <Image src={profileuser} className='img' alt="Profile User"/>
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <h4>Life Event</h4>
+        </div>
+
+        <div className="card">
+          <h4>Skills/Stack</h4>
+          <div>
+            <div className='my-3 rounded bg-slate-300'>
+              <div className="flex justify-between p-3">
+                <div>Html</div>
+                <div>Logo</div>
+              </div>
+              <div className="BarContainer">
+                <div className="Bar-outer">
+                  <div className="bar-Inner"></div>
+                </div>
+                <div className='percentage'>30%</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="Content2  lg:w-[60%] md:w=[100%] rounded lg:ml-4">
         <div className="Post-content mb-3">

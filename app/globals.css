@@ -27,6 +27,39 @@ body {
     width: 100%;
     height: 100vh;
 }
+h1{
+  font-size: 50px;
+  font-weight: 600;
+}
+h2{
+  font-size: 40px;
+  font-weight: 500;
+}
+h3{
+  font-size: 30px;
+  font-weight: 500;
+}
+h4{
+  font-size: 25px;
+  font-weight: 500;
+}
+h5{
+  font-size: 18px;
+  font-weight: 500;
+}
+h6{
+  font-size: 14px;
+  font-weight: 500;
+}
+span{
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.linkButton span{
+  font-size: 12px !important;
+}
+
 .topbar-container{
   position: sticky;
   top: 0;
@@ -66,6 +99,11 @@ input:active, input:focus, textarea:active, textarea:focus{
   border-radius: 6px;
   padding: 16px;
   padding-bottom: 8px !important;
+}
+.content1, .content2{
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 .postheader{
   display: flex;
@@ -360,6 +398,68 @@ input:active, input:focus, textarea:active, textarea:focus{
   background-color: rgb(3, 3, 3);
   color: #fff;
   transition: all .3s ease-in-out;
+}
+
+
+
+.BarContainer{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.percentage{
+  margin-left: 10px;
+}
+.Bar-outer{
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: gray;
+  border-radius: 10px;
+  
+}
+.bar-Inner{
+  position: absolute;
+  width: 30%;
+  height: 10px;
+  top: 0;
+  left: 0;
+  background-color: aquamarine;
+  border-radius: 10px;
+}
+
+
+.PhotosContainer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.photoimage{
+  width: 200px;
+  height: auto;
+  padding: 2px;
+  flex: 25%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+/* GALLERY */
+.Gallery-Photos-Container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imageGalleryContent{
+  position: relative;
+  width: 100%;
+  max-height: 280px;
+  max-width: 800px;
+  margin: 2px;
+  justify-items: stretch;
+  overflow: hidden;
+  flex: 30%;
 }
 
 
