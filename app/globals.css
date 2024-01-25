@@ -32,7 +32,7 @@ body {
   top: 0;
   width: 100%;
   background-color: #e6e6e6;
-  z-index: 99999;
+  z-index: 9;
 }
 .toplink{
   font-size: 14px;
@@ -55,6 +55,9 @@ input:active, input:focus, textarea:active, textarea:focus{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 24px;
   margin-bottom: 24px;
+}
+.HeaderIconmenu{
+  width: 100%;
 }
 .card-body{
   width: 100%;
@@ -165,7 +168,9 @@ input:active, input:focus, textarea:active, textarea:focus{
   font-size: 16px;
 } */
 
-
+.modal{
+  z-index: 9999999999 !important;
+}
 .navigation{
   width: 94%;
   height: auto;

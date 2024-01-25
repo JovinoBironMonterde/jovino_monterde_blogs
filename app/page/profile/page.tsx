@@ -70,7 +70,6 @@ const Profile = () => {
       </div>
       <div className="Content2  lg:w-[60%] md:w=[100%] rounded lg:ml-4">
         <div className="Post-content mb-3">
-
             <div className="card-body">
               <div className="postheader">
                 <div className='postheadername'>
@@ -132,7 +131,7 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className='modal'>
               <Medmodal
                 open={open}
                 onClose={mdhandleClose}

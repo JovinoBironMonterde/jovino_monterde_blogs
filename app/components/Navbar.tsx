@@ -38,20 +38,21 @@ const Navbar = () => {
         ))}
     </div>
       </div>
-      <div className="profile-container flex justify-between items-center p-4 h-50 px-4 bg-slate-100">
-        <div className="Like-container text-center ">
-          <div className="icon-container mb-2"><ThumbUpIcon className='icon'/></div>
-          <div className="totalCount">100</div>
-          <div className="titlenameName">Likes</div>
+      <div className="profile-container flex flex-col md:flex-row justify-between items-center p-4 h-50 px-4 bg-slate-100">
+        <div className="flex HeaderIconmenu">
+          <div className="Like-container text-center ">
+            <div className="icon-container mb-2"><ThumbUpIcon className='icon'/></div>
+            <div className="totalCount">100</div>
+            <div className="titlenameName">Likes</div>
+          </div>
+          <div className="Comment-Container text-center">
+            <div className="icon-container mb-2"><CommentIcon className='icon'/></div>
+            <div className="totalCount">100</div>
+            <div className="titlenameName">Comments</div>
+          </div>
         </div>
-        <div className="Comment-Container text-center">
-          <div className="icon-container mb-2"><CommentIcon className='icon'/></div>
-          <div className="totalCount">100</div>
-          <div className="titlenameName">Comments</div>
-        </div>
-
         {/* profile */}
-        <div className="profileImage text-center">
+        <div className="profileImage text-center sm:float-start mb-4 md:mb-0 md:mr-4">
           <div className="imagecontainer text-center">
           <div className="imageProfile w-40 h-40 border rounded-full overflow-hidden">
             <Image src={profile} className='img' alt="Profile User"/>
@@ -62,8 +63,10 @@ const Navbar = () => {
             <div className="designation">Frontend Developer</div>
           </div>
         </div>
-        <div className="Event-Conatiner">Event</div>
-        <div className="AddPost-Container">Add Post</div>
+        <div className="flex HeaderIconmenu">
+          <div className="Event-Conatiner">Event</div>
+          <div className="AddPost-Container">Add Post</div>
+        </div>
       </div>
       <div className="MenuMainContainer bg-blue-100 w-full px-4 py-2">
         <div className="flex justify-between items-center">
