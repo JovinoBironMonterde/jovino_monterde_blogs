@@ -72,7 +72,7 @@ const Profile = () => {
     <div className='PageContainer'>
      <div className="lg:flex md:block">
       <div className="content1  lg:w-[40%] h-[50px] md:w=[100%] rounded">
-        <div className="card">
+        <div className="card-body">
           <h4>About</h4>
           <p>Hello! I'm <span>Jovi Monterde,</span> a passionate frontend developer with a love for creating beautiful and user-friendly web experiences. With 11 months of experience in the field, I've had the privilege of working on a wide range of projects, from single-page applications to complex e-commerce platforms.</p>
           <hr className='my-4' />
@@ -106,7 +106,7 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card-body">
           <h4>Photos</h4>
           <div className="PhotosContainer">
             <div className="photoimage">
@@ -130,11 +130,11 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card-body">
           <h4>Life Event</h4>
         </div>
 
-        <div className="card">
+        <div className="card-body">
           <h4>Skills/Stack</h4>
           <div>
             <div className='my-3 rounded bg-slate-300'>

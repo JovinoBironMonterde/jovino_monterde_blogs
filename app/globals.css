@@ -60,6 +60,45 @@ span{
   font-size: 12px !important;
 }
 
+
+.HeaderIconmenu{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly
+}
+.socialmedia-Icon{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #014e96d5;
+  background-color: #BFD7ED;
+}
+.socialmedia-Icon:hover{
+  cursor: pointer;
+  background-color: #79bef3b0;
+  color: #012949;
+  transition: all .3s ease-in-out;
+}
+
+.menubutton{
+  padding: 20px 14px;
+}
+.menubutton:hover{
+  background-color: #79bef3b0;
+  color: #012949;
+  cursor: pointer;
+}
+.menubutton.active{
+  background-color: #79bef3b0;
+}
+
+
 .topbar-container{
   position: sticky;
   top: 0;
@@ -88,17 +127,18 @@ input:active, input:focus, textarea:active, textarea:focus{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 24px;
   margin-bottom: 24px;
+  background-color: #fdfdfd;
 }
-.HeaderIconmenu{
-  width: 100%;
-}
+
 .card-body{
   width: 100%;
   height: auto;
-  border: 1px solid #e6e6e6;
+  margin-bottom: 20px;
+  /* border: 1px solid #e6e6e6; */
   border-radius: 6px;
   padding: 16px;
   padding-bottom: 8px !important;
+  background-color: #cfe4f3b6;
 }
 .content1, .content2{
   position: relative;
@@ -137,7 +177,7 @@ input:active, input:focus, textarea:active, textarea:focus{
 .Postcontent{
   padding: 10px;
   border: 1px solid rgba(211, 211, 211, 0.116);
-  background-color: #f7f7f7;
+  background-color: #cfe4f3b6;
   border-radius: 6px;
   font-size: 14px;
 }
@@ -196,8 +236,8 @@ input:active, input:focus, textarea:active, textarea:focus{
 }
 .linkButton:hover{
   cursor: pointer;
-  border-bottom: 1px solid #321eee;
-  color: #321eee;
+  border-bottom: 1px solid #62B8FC;
+  color: #60A3D9;
 }
 .MoreVert{
   font-size: 16px;
@@ -218,12 +258,27 @@ input:active, input:focus, textarea:active, textarea:focus{
 }
 
 .profile-container{
+ 
   position: relative;
+  width: 100%;
+  height: auto;
+}
+.mobilesize-navbar{
+  display: none;
+  width: 100%;
+}
+.mobileNavbarContent{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .Like-container, .Comment-Container, .Event-Conatiner, .AddPost-Container, .profileImage{
   line-height: 20px;
   width: 100%;
+  height: auto;
   text-align: center;
   justify-content: center;
 }
@@ -257,6 +312,19 @@ input:active, input:focus, textarea:active, textarea:focus{
 }
 .namedetails{
   margin-bottom: -25px;
+  width: 100%;
+}
+.mobileSize-HeaderIconmenu-Container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mobileSize-HeaderIconmenu{
+  width: 100%;
+  flex: 45%;
+  display: flex;
+  margin: 14px 0;
+  justify-content: space-around;
 }
 #cover-img{
   width: 100% !important;
@@ -276,6 +344,7 @@ input:active, input:focus, textarea:active, textarea:focus{
 
 .MenuMainContainer{
   width: 100%;
+  background-color: #BFD7ED;
 }
 
 .SearchContainer{
@@ -307,10 +376,6 @@ input:active, input:focus, textarea:active, textarea:focus{
 .PageContainer{
   width: 94%;
   margin: 14px auto;
-}
-
-.card-body{
-  margin-bottom: 20px;
 }
 
 /* Comments */
@@ -395,8 +460,8 @@ input:active, input:focus, textarea:active, textarea:focus{
 }
 .iconbutton:hover{
   cursor: pointer;
-  background-color: rgb(3, 3, 3);
-  color: #fff;
+  background-color: #BFD7ED;
+  color: #003B73;
   transition: all .3s ease-in-out;
 }
 
@@ -463,6 +528,30 @@ input:active, input:focus, textarea:active, textarea:focus{
 }
 
 
+.spinnerContainer{
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: 0;
+  left: 0;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progressbar{
+  background-color: gray !important;
+}
+
+
+@media (max-width: 890px) {
+  .profile-container{
+    display: none !important;
+  }
+  .mobilesize-navbar{
+    display: block !important;
+  }
+}
 
 
 

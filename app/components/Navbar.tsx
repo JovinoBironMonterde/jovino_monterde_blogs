@@ -7,6 +7,11 @@ import cover2 from '../../public/assets/img/cover2.webp'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import CommentIcon from '@mui/icons-material/Comment';
 import profile from '../../public/assets/img/sample2.webp'
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import XIcon from '@mui/icons-material/X';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 
 const Navbar = () => {
@@ -38,17 +43,22 @@ const Navbar = () => {
         ))}
     </div>
       </div>
-      <div className="profile-container flex flex-col md:flex-row justify-between items-center p-4 h-50 px-4 bg-slate-100">
+      <div className="profile-container flex md:flex-row  justify-between items-center p-4 px-4 bg-slate-100">
         <div className="flex HeaderIconmenu">
           <div className="Like-container text-center ">
             <div className="icon-container mb-2"><ThumbUpIcon className='icon'/></div>
-            <div className="totalCount">100</div>
+            <div className="totalCount"><h4>100</h4></div>
             <div className="titlenameName">Likes</div>
           </div>
           <div className="Comment-Container text-center">
             <div className="icon-container mb-2"><CommentIcon className='icon'/></div>
-            <div className="totalCount">100</div>
+            <div className="totalCount"><h4>100</h4></div>
             <div className="titlenameName">Comments</div>
+          </div>
+          <div className="Comment-Container text-center">
+            <div className="icon-container mb-2"><CommentIcon className='icon'/></div>
+            <div className="totalCount"><h4>100</h4></div>
+            <div className="titlenameName">Followers</div>
           </div>
         </div>
         {/* profile */}
@@ -59,25 +69,77 @@ const Navbar = () => {
           </div>
           </div>
           <div className="namedetails text-center">
-            <div className="profilename">Jovino MOnterde</div>
-            <div className="designation">Frontend Developer</div>
+            <div className="profilename"><h4>Jovino Monterde</h4></div>
+            <div className="designation"><h5>Personal blog</h5></div>
           </div>
         </div>
         <div className="flex HeaderIconmenu">
-          <div className="Event-Conatiner">Event</div>
-          <div className="AddPost-Container">Add Post</div>
+          <div className="socialmedia-Icon"><FacebookIcon/></div>
+          <div className="socialmedia-Icon"><LinkedInIcon/></div>
+          <div className="socialmedia-Icon"><InstagramIcon/></div>
+          <div className="socialmedia-Icon"><XIcon/></div>
+          <div className="socialmedia-Icon"><YouTubeIcon/></div>
+          {/* <div className="Event-Conatiner">Event</div>
+          <div className="AddPost-Container">Add Post</div> */}
         </div>
       </div>
-      <div className="MenuMainContainer bg-blue-100 w-full px-4 py-2">
+
+
+      <div className="mobilesize-navbar p-4 bg-slate-100">
+        <div className="mobileNavbarContent">
+          <div className="flex w-100 p-4">
+            <div className="imagecontainer text-center">
+              <div className="imageProfile w-40 h-40 border rounded-full overflow-hidden">
+                <Image src={profile} className='img' alt="Profile User"/>
+              </div>
+            </div>
+            <div className="namedetails pl-4">
+              <div className="profilename"><h1>Jovino Monterde</h1></div>
+              <div className="designation"><h3>Personal blog</h3></div>
+            </div>
+          </div>
+          <div className="mobileSize-HeaderIconmenu-Container">
+            <div className="mobileSize-HeaderIconmenu">
+              <div className="Like-container text-center ">
+                <div className="icon-container mb-2"><ThumbUpIcon className='icon'/></div>
+                <div className="totalCount"><h4>100</h4></div>
+                <div className="titlenameName">Likes</div>
+              </div>
+              <div className="Comment-Container text-center">
+                <div className="icon-container mb-2"><CommentIcon className='icon'/></div>
+                <div className="totalCount"><h4>100</h4></div>
+                <div className="titlenameName">Comments</div>
+              </div>
+              <div className="Comment-Container text-center">
+                <div className="icon-container mb-2"><CommentIcon className='icon'/></div>
+                <div className="totalCount"><h4>100</h4></div>
+                <div className="titlenameName">Followers</div>
+              </div>
+            </div>
+            {/* profile */}
+          
+            <div className="mobileSize-HeaderIconmenu">
+              <div className="socialmedia-Icon"><FacebookIcon/></div>
+              <div className="socialmedia-Icon"><LinkedInIcon/></div>
+              <div className="socialmedia-Icon"><InstagramIcon/></div>
+              <div className="socialmedia-Icon"><XIcon/></div>
+              <div className="socialmedia-Icon"><YouTubeIcon/></div>
+              {/* <div className="Event-Conatiner">Event</div>
+              <div className="AddPost-Container">Add Post</div> */}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="MenuMainContainer w-full px-4 py-2">
         <div className="flex justify-between items-center">
           <div className="SearchContainer">
             <input type="text" className=''  name="" id="Inputsearch" />
           </div>
           <div className="menuContainer">
-            <Link className='mx-3' href="/page/profile">Profile</Link>
-            <Link className='mx-3' href="/page/post">Post</Link>
-            <Link className='mx-3' href="/page/gallery">Gallery</Link>
-            <Link className='mx-3' href="/page/follower">Followers</Link>
+            <Link className='menubutton' href="/page/post">Post</Link>
+            <Link className='menubutton' href="/page/profile">Profile</Link>
+            <Link className='menubutton' href="/page/gallery">Gallery</Link>
+            <Link className='menubutton' href="/page/follower">Followers</Link>
           </div>
         </div>
       </div>
