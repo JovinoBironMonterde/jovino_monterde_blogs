@@ -1,0 +1,62 @@
+
+/* SOCIAL MEDIA ICON */
+.mobileSize-HeaderIconmenu{
+    width: 100%;
+    flex: 45%;
+    display: flex;
+    margin: 14px 0;
+    justify-content: space-around;
+  }
+  .socialmedia-Icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    color: black;
+  }
+  .socialmedia-Icon .icon{
+    font-size: 20px !important;
+  }
+  .socialmedia-Icon:hover{
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+  }
+  .facebook{
+    background-color: #0b87ec41;
+  }
+  .facebook:hover{
+    color: #fff;
+    background-color: #0b87ec;
+  }
+  .Linkedin{
+    background-color: #799cb87a;
+  }
+  .Linkedin:hover{
+    color: #fff;
+    background-color: #799cb8;
+  }
+  .Instagram{
+    background-color: #d486862c;
+  }
+  .Instagram:hover{
+    color: #fff;
+    background-color: #d48686;
+  }
+  .xIcon{
+    background-color: #1616162c;
+  }
+  .xIcon:hover{
+    color: #fff;
+    background-color: #161616f8;
+  }
+  .youtube{
+    background-color: #bb32325b;
+  }
+  .youtube:hover{
+    color: #fff;
+    background-color: #bb3232;
+  }

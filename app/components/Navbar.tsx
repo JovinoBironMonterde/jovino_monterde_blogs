@@ -43,7 +43,7 @@ const Navbar = () => {
         ))}
     </div>
       </div>
-      <div className="profile-container flex md:flex-row  justify-between items-center p-4 px-4 bg-slate-100">
+      <div className="profile-container flex md:flex-row  justify-between items-center p-4 px-4">
         <div className="flex HeaderIconmenu">
           <div className="Like-container text-center ">
             <div className="icon-container mb-2"><ThumbUpIcon className='icon'/></div>
@@ -74,18 +74,18 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex HeaderIconmenu">
-          <div className="socialmedia-Icon"><FacebookIcon/></div>
-          <div className="socialmedia-Icon"><LinkedInIcon/></div>
-          <div className="socialmedia-Icon"><InstagramIcon/></div>
-          <div className="socialmedia-Icon"><XIcon/></div>
-          <div className="socialmedia-Icon"><YouTubeIcon/></div>
+          <div className="socialmedia-Icon facebook"><FacebookIcon className='icon'/></div>
+          <div className="socialmedia-Icon Linkedin"><LinkedInIcon className='icon'/></div>
+          <div className="socialmedia-Icon Instagram"><InstagramIcon className='icon'/></div>
+          <div className="socialmedia-Icon xIcon"><XIcon className='icon'/></div>
+          <div className="socialmedia-Icon youtube"><YouTubeIcon className='icon'/></div>
           {/* <div className="Event-Conatiner">Event</div>
           <div className="AddPost-Container">Add Post</div> */}
         </div>
       </div>
 
 
-      <div className="mobilesize-navbar p-4 bg-slate-100">
+      <div className="mobilesize-navbar p-4">
         <div className="mobileNavbarContent">
           <div className="flex w-100 p-4">
             <div className="imagecontainer text-center">
@@ -119,18 +119,18 @@ const Navbar = () => {
             {/* profile */}
           
             <div className="mobileSize-HeaderIconmenu">
-              <div className="socialmedia-Icon"><FacebookIcon/></div>
-              <div className="socialmedia-Icon"><LinkedInIcon/></div>
-              <div className="socialmedia-Icon"><InstagramIcon/></div>
-              <div className="socialmedia-Icon"><XIcon/></div>
-              <div className="socialmedia-Icon"><YouTubeIcon/></div>
+              <div className="socialmedia-Icon facebook"><FacebookIcon className='icon'/></div>
+              <div className="socialmedia-Icon Linkedin"><LinkedInIcon className='icon'/></div>
+              <div className="socialmedia-Icon Instagram"><InstagramIcon className='icon'/></div>
+              <div className="socialmedia-Icon xIcon"><XIcon className='icon'/></div>
+              <div className="socialmedia-Icon youtube"><YouTubeIcon className='icon'/></div>
               {/* <div className="Event-Conatiner">Event</div>
               <div className="AddPost-Container">Add Post</div> */}
             </div>
           </div>
         </div>
       </div>
-      <div className="MenuMainContainer w-full px-4 py-2">
+      <div className="customCard MenuMainContainer w-full px-4 py-2">
         <div className="flex justify-between items-center">
           <div className="SearchContainer">
             <input type="text" className=''  name="" id="Inputsearch" />

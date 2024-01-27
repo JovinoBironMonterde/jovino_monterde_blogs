@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -17,17 +17,11 @@
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+  background-color: #f0f0f0;
     width: 100%;
     height: 100vh;
-}
-h1{
+} */
+/* h1{
   font-size: 50px;
   font-weight: 600;
 }
@@ -54,7 +48,9 @@ h6{
 span{
   font-weight: 500;
   font-size: 18px;
-}
+} */
+
+
 
 .linkButton span{
   font-size: 12px !important;
@@ -68,23 +64,7 @@ span{
   align-items: center;
   justify-content:space-evenly
 }
-.socialmedia-Icon{
-  width: 60px;
-  height: 60px;
-  display: flex;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: #014e96d5;
-  background-color: #BFD7ED;
-}
-.socialmedia-Icon:hover{
-  cursor: pointer;
-  background-color: #79bef3b0;
-  color: #012949;
-  transition: all .3s ease-in-out;
-}
+
 
 .menubutton{
   padding: 20px 14px;
@@ -127,7 +107,8 @@ input:active, input:focus, textarea:active, textarea:focus{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 24px;
   margin-bottom: 24px;
-  background-color: #fdfdfd;
+  /* background-color: #fdfdfd; */
+  background-color: #fff;
 }
 
 .card-body{
@@ -138,12 +119,15 @@ input:active, input:focus, textarea:active, textarea:focus{
   border-radius: 6px;
   padding: 16px;
   padding-bottom: 8px !important;
-  background-color: #cfe4f3b6;
+  /* background-color: #cfe4f3b6; */
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .content1, .content2{
   position: relative;
   width: 100%;
-  height: auto;
+  height: auto !important;
+
 }
 .postheader{
   display: flex;
@@ -176,8 +160,7 @@ input:active, input:focus, textarea:active, textarea:focus{
 }
 .Postcontent{
   padding: 10px;
-  border: 1px solid rgba(211, 211, 211, 0.116);
-  background-color: #cfe4f3b6;
+  background-color: #f5f5f5b6;
   border-radius: 6px;
   font-size: 14px;
 }
@@ -319,13 +302,7 @@ input:active, input:focus, textarea:active, textarea:focus{
   display: flex;
   flex-wrap: wrap;
 }
-.mobileSize-HeaderIconmenu{
-  width: 100%;
-  flex: 45%;
-  display: flex;
-  margin: 14px 0;
-  justify-content: space-around;
-}
+
 #cover-img{
   width: 100% !important;
   transition: all .3s ease-in-out !important;
@@ -344,7 +321,7 @@ input:active, input:focus, textarea:active, textarea:focus{
 
 .MenuMainContainer{
   width: 100%;
-  background-color: #BFD7ED;
+  /* background-color: #BFD7ED; */
 }
 
 .SearchContainer{

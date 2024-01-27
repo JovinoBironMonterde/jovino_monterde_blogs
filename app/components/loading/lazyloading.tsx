@@ -1,24 +1,11 @@
-// // app/components/loading/lazyloading.tsx
-// "use client";
-// import React, { ComponentType, useEffect, useState } from 'react';
-// import useIntersectionObserver from '../../hooks/useIntersectionObserver';const withLazyLoad = <P extends object>(
-//   WrappedComponent: ComponentType<P>,
-//   threshold = 0.5
-// ): React.FC<P> => {
-//   return (props: P) => {
-//     const [isInView, ref] = useIntersectionObserver(threshold);
-//     const [hasLoaded, setHasLoaded] = useState(false);
-// useEffect(() => {
-//       if (isInView && !hasLoaded) {
-//         setHasLoaded(true);
-//       }
-//     }, [isInView, hasLoaded]);
-//     return (
-//       <div ref={ref}>
-//         {hasLoaded ? <WrappedComponent {...props} /> : <div>Loading...</div>}
-//       </div>
-//     );
-//   };
-// };
-// export default withLazyLoad;
+import React from 'react'
 
+const lazyloading = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default lazyloading

@@ -71,10 +71,10 @@ const Profile = () => {
   return (
     <div className='PageContainer'>
      <div className="lg:flex md:block">
-      <div className="content1  lg:w-[40%] h-[50px] md:w=[100%] rounded">
+      <div className="content1  lg:w-[40%] md:w=[100%] rounded">
         <div className="card-body">
           <h4>About</h4>
-          <p>Hello! I'm <span>Jovi Monterde,</span> a passionate frontend developer with a love for creating beautiful and user-friendly web experiences. With 11 months of experience in the field, I've had the privilege of working on a wide range of projects, from single-page applications to complex e-commerce platforms.</p>
+          <p>Hello! I&apos;m <span>Jovi Monterde&rsquo;</span> a passionate frontend developer with a love for creating beautiful and user-friendly web experiences. With 11 months of experience in the field, I &rsquo; ve had the privilege of working on a wide range of projects, from single-page applications to complex e-commerce platforms.</p>
           <hr className='my-4' />
           <div>
             <div className="flex items-center mb-3">
@@ -152,7 +152,8 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <div className="Content2  lg:w-[60%] md:w=[100%] rounded lg:ml-4">
+      <div className="mx-2"></div>
+      <div className="Content2  lg:w-[60%] md:w=[100%] rounded">
         <div className="Post-content mb-3">
             <div className="card-body">
               <div className="postheader">
@@ -169,7 +170,6 @@ const Profile = () => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quasi! Veniam tempora maxime aut labore quaerat eum expedita voluptate doloribus ab architecto corrupti harum illo quae quis, hic, dolores excepturi!
               </div>
               <div className='likecomment-container'>
-
                 <div className='like'>
                   <ThumbUpOffAltIcon className='iconbutton' onClick={handleLike} />
                   <div className='linkButton'>
