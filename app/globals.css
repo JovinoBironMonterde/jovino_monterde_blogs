@@ -52,6 +52,41 @@ span{
 
 
 
+.mobile-profile-ImageContainer{
+  display: flex;
+}
+@media (max-width: 700px) {
+  .mobile-profile-ImageContainer{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+  }
+  .mobile-profile-ImageContainer .imagecontainer .imageProfile{
+    position: absolute;
+    bottom: 0;
+  }
+  .namedetails{
+    padding-left: 0 !important;
+    padding-bottom: 20px !important;
+  }
+  .profilename h1{
+    font-size: 36px !important;
+  }
+  .designation h3{
+    font-size: 18px !important;
+  }
+  
+}
+
+
+
+
+
+
+
 .linkButton span{
   font-size: 12px !important;
 }
@@ -67,7 +102,7 @@ span{
 
 
 .menubutton{
-  padding: 20px 14px;
+  padding: 17px 14px;
 }
 .menubutton:hover{
   background-color: #79bef3b0;
@@ -114,7 +149,7 @@ input:active, input:focus, textarea:active, textarea:focus{
 .card-body{
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   /* border: 1px solid #e6e6e6; */
   border-radius: 6px;
   padding: 16px;
@@ -233,15 +268,12 @@ input:active, input:focus, textarea:active, textarea:focus{
   z-index: 9999999999 !important;
 }
 .navigation{
-  width: 94%;
+  width: 100%;
   height: auto;
-  margin: 0 auto;
   background-color: #fff;
-  border-radius: 10px;
 }
 
 .profile-container{
- 
   position: relative;
   width: 100%;
   height: auto;
@@ -351,7 +383,7 @@ input:active, input:focus, textarea:active, textarea:focus{
 
 /* pages */
 .PageContainer{
-  width: 94%;
+  width: 98%;
   margin: 14px auto;
 }
 

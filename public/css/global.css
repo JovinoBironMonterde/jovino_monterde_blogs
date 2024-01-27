@@ -12,6 +12,7 @@
     --card-bg-color-dark: #465670; /* Dark gray for cards */
     --bg-faded-dark: #49beff1a;
     --bgfaded-two-dark: #b0c0e51c;
+    --bg-topbar-dark: #303846;
   }
 
 
@@ -48,6 +49,9 @@
     }
    .socialmedia-Icon{
     color: #e4e0e0;
+  }
+  .topbarcontainer{
+    background-color: var(--bg-topbar-dark);
   }
     
   }

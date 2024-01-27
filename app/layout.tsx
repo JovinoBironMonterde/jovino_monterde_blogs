@@ -5,7 +5,7 @@ import '../public/css/global.css'
 import '../public/css/style.css'
 import Navbar from './components/Navbar'
 import Topbar from './components/Topbar'
-import ThemeToggle  from './components/ThemeToggle'
+
 
 
 
@@ -27,7 +27,6 @@ export default function RootLayout({
         <div className="main-container pb-3">
           <div className="topbar-container mb-4">
             <Topbar/>
-            <ThemeToggle />
             </div>
           <div className="navigation">
           <Navbar/>

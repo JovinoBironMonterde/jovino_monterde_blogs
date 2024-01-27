@@ -87,7 +87,7 @@ const Navbar = () => {
 
       <div className="mobilesize-navbar p-4">
         <div className="mobileNavbarContent">
-          <div className="flex w-100 p-4">
+          <div className="mobile-profile-ImageContainer p-4">
             <div className="imagecontainer text-center">
               <div className="imageProfile w-40 h-40 border rounded-full overflow-hidden">
                 <Image src={profile} className='img' alt="Profile User"/>

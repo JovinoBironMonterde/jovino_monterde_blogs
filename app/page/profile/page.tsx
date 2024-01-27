@@ -73,7 +73,7 @@ const Profile = () => {
      <div className="lg:flex md:block">
       <div className="content1  lg:w-[40%] md:w=[100%] rounded">
         <div className="card-body">
-          <h4>About</h4>
+          <h5>About</h5>
           <p>Hello! I&apos;m <span>Jovi Monterde&rsquo;</span> a passionate frontend developer with a love for creating beautiful and user-friendly web experiences. With 11 months of experience in the field, I &rsquo; ve had the privilege of working on a wide range of projects, from single-page applications to complex e-commerce platforms.</p>
           <hr className='my-4' />
           <div>
@@ -107,7 +107,7 @@ const Profile = () => {
         </div>
 
         <div className="card-body">
-          <h4>Photos</h4>
+          <h5>Photos</h5>
           <div className="PhotosContainer">
             <div className="photoimage">
               <Image src={profileuser} className='img' alt="Profile User"/>
@@ -131,11 +131,11 @@ const Profile = () => {
         </div>
 
         <div className="card-body">
-          <h4>Life Event</h4>
+          <h5>Life Event</h5>
         </div>
 
         <div className="card-body">
-          <h4>Skills/Stack</h4>
+          <h5>Skills/Stack</h5>
           <div>
             <div className='my-3 rounded bg-slate-300'>
               <div className="flex justify-between p-3">
