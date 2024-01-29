@@ -84,7 +84,6 @@ const Navbar = () => {
         </div>
       </div>
 
-
       <div className="mobilesize-navbar p-4">
         <div className="mobileNavbarContent">
           <div className="mobile-profile-ImageContainer p-4">

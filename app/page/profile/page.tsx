@@ -176,7 +176,6 @@ const Profile = () => {
                     <span id='visitorLike'>{likesCount}</span> <span>Others</span>
                   </div>
                 </div>
-
                 <div className="comment"   onClick={mdhandleOpen}>
                   <div className='linkButton mx-4'><span>10</span>&nbsp;Comments</div>
                   <CommentIcon className='iconbutton'/>

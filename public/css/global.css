@@ -5,13 +5,15 @@
 
 :root {
     --bg-color-light: #ffffff;
-    --text-color-light: #000000;
+    --text-color-light: #252e3d;
     --card-bg-color-light: #f9f9f9; /* Light gray for cards */
-    --bg-color-dark: #2a3447;
-    --text-color-dark: #dbdfe2;
-    --card-bg-color-dark: #465670; /* Dark gray for cards */
+    /* --bg-color-dark: #2a3447; */
+    --bg-color-dark: #232c3a;
+    --text-color-dark: #d4d7da;
+    /* --card-bg-color-dark: #465670; */
+    --card-bg-color-dark: #2d384a;
     --bg-faded-dark: #49beff1a;
-    --bgfaded-two-dark: #b0c0e51c;
+    --bg-faded-two-dark: #aec1ed0a;
     --bg-topbar-dark: #303846;
   }
 
@@ -39,7 +41,7 @@
       background-color: var(--card-bg-color-dark);
     }
     .Postcontent{
-        background-color: var(--bgfaded-two-dark);
+        background-color: var(--bg-faded-two-dark);
     }
     .iconbutton{
         color: var(--text-color-dark);
@@ -52,6 +54,9 @@
   }
   .topbarcontainer{
     background-color: var(--bg-topbar-dark);
+  }
+  input{
+    color: var(--text-color-light);
   }
     
   }
