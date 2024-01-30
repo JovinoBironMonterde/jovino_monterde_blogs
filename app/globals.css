@@ -335,6 +335,12 @@ input:active, input:focus, textarea:active, textarea:focus{
   flex-wrap: wrap;
 }
 
+@media (max-width: 767px) {
+  .mobileSize-HeaderIconmenu-Container{
+    display: block
+  }
+}
+
 #cover-img{
   width: 100% !important;
   transition: all .3s ease-in-out !important;
@@ -540,10 +546,10 @@ input:active, input:focus, textarea:active, textarea:focus{
 .spinnerContainer{
   position: absolute;
   width: 100%;
-  height: 500px;
+  height: 100%;
   top: 0;
   left: 0;
-  background-color: antiquewhite;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -563,5 +569,13 @@ input:active, input:focus, textarea:active, textarea:focus{
 }
 
 
+.FullcsreenModal{
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 999999999;
+}
+.Basic.tabs{
+  background-color: transparent !important;
+}
 
 

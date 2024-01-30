@@ -19,7 +19,7 @@ const Page = () => {
     // Simulate loading delay (replace this with actual data fetching)
     setTimeout(() => {
       setLoading(false); // Set loading to false after delay
-    }, 50000); // Adjust timeout as needed
+    }, 3000); // Adjust timeout as needed
   };
 
   return (

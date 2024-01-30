@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/loading/loadingSpinner.js", "app/components/loading/lazyloading.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/loading/loadingSpinner.js", "app/components/loading/lazyloading.tsx", "app/components/modals/fullscreen-modal.js"],
   "exclude": ["node_modules"]
 }

@@ -37,7 +37,7 @@
     }
   
     .card,
-    .card-body, .navigation {
+    .card-body, .navigation, .spinnerContainer {
       background-color: var(--card-bg-color-dark);
     }
     .Postcontent{
@@ -62,7 +62,7 @@
   }
   
   .card,
-  .card-body, .navigation {
+  .card-body, .navigation, .spinnerContainer {
     background-color: var(--card-bg-color-light);
   }
   .customCard{

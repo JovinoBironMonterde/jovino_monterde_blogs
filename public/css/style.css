@@ -71,8 +71,7 @@
   }
   .post-page-content{
     position: relative;
-    width: 100%;
-    max-width: 800px;
+    width: 100% !important;
     max-height: 400px;
 
     flex: 40%;
@@ -103,5 +102,21 @@
     height: 40px;
     border-radius: 20px;
     background-color: #162a3a;
+  }
+  .postContent-mobile{
+    width: 100%;
+    display: none;
+  }
+  .postContent-desktop{
+    width: 100%;
+  }
+  @media (max-width: 800px) {
+    .postContent-mobile{
+      display: block !important;
+    }
+    .postContent-desktop{
+      display: none !important;
+    }
+    
   }
 
