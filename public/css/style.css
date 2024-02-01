@@ -71,7 +71,6 @@
   }
   .post-page-content{
     position: relative;
-    width: 100% !important;
     max-height: 400px;
 
     flex: 40%;
@@ -118,5 +117,43 @@
       display: none !important;
     }
     
+  }
+
+  /* Follower page section */
+  .Folloers-page-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .FollowersCard{
+    width: 100% !important;
+    max-width: 430px !important;
+    padding: 10px 25px;
+    height: 140px;
+    margin: 10px;
+    flex: 30%;
+    display: flex;
+    align-items: center;
+  }
+  .folloerImage{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    background-color: #e2e7eb;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .FolloersName{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .FolloersEmail{
+    color: gray;
+  }
+  .icon{
+    font-size: 18px !important;
   }
 
